@@ -1,0 +1,518 @@
+/*
+
+FONTS
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Racing+Sans+One&family=Roboto+Condensed&display=swap');
+
+.racing
+{
+    font-family: 'Racing Sans One', sans-serif;
+}
+.chin
+{
+    font-family: 'Cinzel Decorative', serif;
+}
+.roboto
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 250%;
+}
+.metalic
+{
+    background: linear-gradient(hsl(0 0% 90%), hsl(0 0% 40%));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+/*
+
+RESETS
+
+*/
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+html
+{
+    background: #3b1e66;
+    background: linear-gradient(180deg, #3b1e66 0%, rgba(35,40,45,1) 100%);  
+    background-repeat: no-repeat;
+    color: #EAEAEA;
+    padding-top: 5rem;
+}
+a
+{
+    color: #FAF26F;
+    text-decoration: none;
+}
+a:hover
+{
+    color: #FFF;
+}
+.container
+{
+    display: block;
+    position: relative;
+    width: 980px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+.scroller
+{
+    margin-top: -80px;
+}
+
+/*
+
+HEADER
+
+*/
+
+.header
+{
+    display: block;
+    position: fixed;
+    line-height: 5rem;
+    font-size: 2rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background: #9F3D7E;
+    border-bottom: 3px double solid #FFF;
+    text-align: left;
+    z-index: 99999;
+}
+.logo b
+{
+    display: inline-block;
+    position: relative;
+}
+.logo .racing
+{
+    top: -5px;
+}
+.logo .chin
+{
+    color: #FFF;
+}
+.header a.link
+{
+    float: right;
+    font-size: 1rem;
+    padding: 0 1rem;
+    background: #9f3d7e;
+    color: #FAF26F;
+    transition: all 0.5s;
+}
+.header a.link.active,
+.header a.link:hover
+{
+    color: #FFF;
+    background: linear-gradient(180deg, #9f3d7e 0%, #ad5990 90%, #9f3d7e 100%); 
+}
+.header .toggler-link
+{
+    display: none;
+}
+
+/*
+
+FOLD
+
+*/
+
+.fold
+{
+    display: block;
+    position: relative;
+    padding: 14rem 0 8rem;
+    margin: -80px 0 0;
+    background: linear-gradient(180deg, #9f3d7e 0%, #3A1E66 100%); 
+}
+.fold.flip
+{
+    background: linear-gradient(180deg, #3A1E66 0%, #9f3d7e 100%); 
+    margin: 0;
+}
+.fold .tagline
+{
+    margin-bottom: -1rem;
+}
+.fold .byline
+{
+    color: #FAF26F;
+    font-size: 90%;
+    line-height: 1.6rem;
+}
+.fold .byline a
+{
+    color: #FFF;
+}
+.fold .byline a:hover
+{
+    color: #00a3ff;
+}
+img.hero
+{
+    margin-bottom: -8rem;
+}
+
+/*
+
+EXPLODING IMAGES
+
+*/
+
+figure.frame
+{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    width: 320px;
+    height: 320px;
+    border-radius: 1rem;
+    background: #151A15;
+    background: linear-gradient(180deg, #757575 0%, #18170b 100%);
+    opacity: 0.45;
+    z-index: 8;
+}
+div.img
+{
+    display: block;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    right: 0.2rem;
+    padding: 1rem;
+    bottom: 0.2rem;
+    border-radius: 1rem;
+    background: #151A15;
+    background: linear-gradient(180deg, #151A15 0%, transparent 100%); 
+    background: linear-gradient(180deg, #18170b 0%, #747134 100%); 
+}
+div.img:before
+{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    background: #FFF;
+    opacity: 0.1;
+    border-radius: 0.3rem;
+}
+figure.frame.fake div.img:before
+{
+    display: none;
+}
+figure.frame img,
+figure.frame svg
+{
+    width: 100%;
+    height: auto;
+}
+figure.frame.fake,
+figure.frame.fake div.img
+{
+    background: none;
+    border-bottom: none;
+    opacity: 1;
+}
+
+#wallet.eden-demo figure.frame
+{
+    width: 595px;
+    height: 725px;
+    margin: 1rem auto 14rem;
+    display: block;
+    opacity: 1;
+}
+#wallet.eden-demo figure.frame .button
+{
+    bottom: -8rem;
+    left: 155px;
+    position: absolute;
+    display: block;
+}
+#wallet.eden-demo figure.frame iframe
+{
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border: none;
+    background: transparent;
+}
+
+/*
+
+SECTIONS
+
+*/
+
+.section
+{
+    text-align: left;
+    perspective: 1px;
+}
+.section .layer 
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3rem 0;
+    font-size: 200%;
+}
+.section .layer.base 
+{
+    z-index: 99;
+}
+.section .layer.back 
+{
+    z-index: 9;
+}
+.section .layer .content 
+{
+    display: block;
+    position: relative;
+    margin: 0;
+    vertical-align: top;
+}
+.section .layer .content .captions,
+.section .layer .content h4
+{
+    display: inline-block;
+    position: relative;
+    width: calc(100% - 360px);
+    padding: 0;
+    vertical-align: top;
+    margin: 1rem 0 0 20px;
+    font-size: 160%;
+    font-weight: bold;
+}
+.section .layer .content h4
+{
+    width: 100%;
+    margin-left: 0;
+    font-size: 200%;
+    line-height: 40px;
+}
+.section.flip .layer .content h4,
+.section.flip .layer .content .captions
+{
+    /*text-align: right;*/
+}
+#wallet.section.sectioner
+{
+    padding-top: 2rem;
+}
+#server.section.sectioner
+{
+    padding-bottom: 32rem;
+}
+#contacts .tagline
+{
+    margin-top: -8rem;
+}
+.section .layer .content .captions
+{
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    text-align: justify;
+    opacity: 0.75;
+}
+.section.flip .layer .content .captions,
+.section.flip .layer .content h4
+{
+    float: left;
+}
+.section.flip .layer .content .captions,
+.section.flip .layer .content h4
+{
+    margin: 1rem 20px 20px 0;
+}
+.section.flip figure.frame
+{
+    float: right;
+}
+
+/*
+
+BUTTONS
+
+*/
+
+.button 
+{
+    display: inline-block;
+    position: relative;
+    padding: 1rem 2rem;
+    border: solid rgba(255,255,255,0.25) 1px;
+    background: transparent;
+    cursor:pointer;
+    transition: all 0.5s;
+    border-radius: 2rem;
+    z-index: 999;
+}
+.button:hover 
+{
+    background: rgba(255,255,255,0.1);
+    border-radius: 0;
+}
+.frame .button
+{
+    width: 215px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+a.button
+{
+    color: #AAE3D2;
+}
+a.button:hover
+{
+    color: #FFF;
+    border-color: #AAE3D2;
+}
+
+/*
+
+RESPONSIVENESS
+
+*/
+
+@media only screen and (max-width: 1100px) 
+{
+    .container
+    {
+        width: calc(100% - 3rem);
+        padding: 0 1rem;
+        margin: 0;
+    }
+    .header .menu
+    {
+        display: block;
+        position: fixed;
+        top: -100vh;
+        height: 100vh;
+        background: #9F3D7E;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 4rem);
+        margin-top: 4rem;
+    }
+    .header .menu a
+    {
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+    .header .toggler-link
+    {
+        display: inline-block;
+        float: right;
+    }
+    .section
+    {
+        padding: 3rem 0;
+        height: auto !important;
+        perspective: none !important;
+    }
+    html body .section .layer
+    {
+        transform: none !important;
+        position: relative;
+        padding: 5rem 0;
+    }
+    .section .layer .content
+    {
+        margin: 0;
+    }
+    .section .layer .frame
+    {
+        display: none;
+    }
+    .section .layer .frame.fake
+    {
+        display: block;
+        margin-top: 0;
+    }
+    .section .layer .content h4
+    {
+        margin-top: 0;
+        font-size: 100%;
+    }
+    figure.frame,
+    .section .layer .content .captions, 
+    .section .layer .content h4
+    {
+        width: 100%;
+    }
+    .section.flip .layer .content h4,
+    .section .layer .content h4
+    {
+        text-align: center;
+        display: block;
+        position: relative;
+        margin: 0 0 2rem;
+    }
+    figure.frame img, figure.frame svg
+    {
+        height: 10rem;
+    }
+    .frame .button
+    {
+        display: block;
+        margin: -3rem auto 3rem;
+    }
+    .section .layer .content .captions
+    {
+        padding: 0;
+        margin: 0;
+    }
+    .fold
+    {
+        margin: -5rem 0 0;
+        padding-top: 8rem;
+    }
+    .section.flip
+    {
+        float: none;
+    }
+    #wallet.eden-demo
+    {
+        overflow: hidden;
+    }
+    #wallet.eden-demo figure.frame
+    {
+        width: calc(100% + 70px);
+        left: -30px;
+    }
+    #wallet.eden-demo figure.frame .button
+    {
+        width: calc(100% - 130px);
+        margin-left: 30px;
+    }
+    #wallet.eden-demo figure.frame .button
+    {
+        left: 0;
+    }
+}
