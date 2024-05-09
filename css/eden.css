@@ -515,4 +515,17 @@ RESPONSIVENESS
     {
         left: 0;
     }
+    html body img[src="img/logo.png"],
+    html body img[src="svg/footer.svg"]
+    {
+        max-width: 100%;
+    }
+    html body img[src="img/logo.png"]
+    {
+        margin-bottom: 0 !important;
+    }
+    html body img[src="svg/footer.svg"]
+    {
+        margin-left: 0 !important;
+    }
 }
